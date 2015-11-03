@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[letsnode.se]]></title>
+  <subtitle><![CDATA[Node.js developer blog]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://letsnode.se/"/>
+  <updated>2015-11-01T17:09:55.581Z</updated>
+  <id>http://letsnode.se/</id>
+  
+  <author>
+    <name><![CDATA[Peter Leinonen]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello world]]></title>
+    <link href="http://letsnode.se/2015/11/01/Hello-world/"/>
+    <id>http://letsnode.se/2015/11/01/Hello-world/</id>
+    <published>2015-11-01T16:57:51.000Z</published>
+    <updated>2015-11-01T17:09:55.581Z</updated>
+    <content type="html"><![CDATA[<p>Hello. I have been experimenting with this Markdown-driven blogging platform called “Hexo”. Seems pretty nice, so I will give it a try.</p>
+<p>I want to explore node.js related things that interest me, that I would love to learn more about, and by writing about it you learn it better. I want to become a better developer, expand my horizons, learn best practices and share cool stuff with others.</p>
+<p>Stay tuned…</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Hello. I have been experimenting with this Markdown-driven blogging platform called “Hexo”. Seems pretty nice, so I will give it a try.</]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
