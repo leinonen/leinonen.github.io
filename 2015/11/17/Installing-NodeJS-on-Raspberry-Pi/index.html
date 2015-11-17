@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Categories | letsnode.se</title>
+  <title>Installing NodeJS on Raspberry Pi | letsnode.se</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.js developer blog. All things node and javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Categories">
-<meta property="og:url" content="http://letsnode.se/categories/index.html">
+  <meta name="description" content="Here are some instructions to install the latest version of NodeJS on your Raspberry Pi device.
+Find the latest version of node by visiting http://nodejs.org/dist. Make sure you get the -linux-arm-7l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Installing NodeJS on Raspberry Pi">
+<meta property="og:url" content="http://letsnode.se/2015/11/17/Installing-NodeJS-on-Raspberry-Pi/index.html">
 <meta property="og:site_name" content="letsnode.se">
-<meta property="og:description" content="Node.js developer blog. All things node and javascript">
-<meta property="og:updated_time" content="2015-11-01T15:31:51.196Z">
+<meta property="og:description" content="Here are some instructions to install the latest version of NodeJS on your Raspberry Pi device.
+Find the latest version of node by visiting http://nodejs.org/dist. Make sure you get the -linux-arm-7l">
+<meta property="og:updated_time" content="2015-11-17T21:15:26.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Categories">
-<meta name="twitter:description" content="Node.js developer blog. All things node and javascript">
+<meta name="twitter:title" content="Installing NodeJS on Raspberry Pi">
+<meta name="twitter:description" content="Here are some instructions to install the latest version of NodeJS on your Raspberry Pi device.
+Find the latest version of node by visiting http://nodejs.org/dist. Make sure you get the -linux-arm-7l">
   
   
     <link rel="icon" href="favicon.png">
@@ -114,14 +117,74 @@
 </aside>
 
       
-      <section id="main"><section class="layout-wrap">
-  <div class="layout-title">
-    <span>Categories</span>
-  </div>
-  <div class="layout-wrap-inner list-categories">
+      <section id="main"><article id="post-Installing-NodeJS-on-Raspberry-Pi" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Installing NodeJS on Raspberry Pi
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2015/11/17/Installing-NodeJS-on-Raspberry-Pi/">
+      <time datetime="2015-11-17T21:06:00.000Z" itemprop="datePublished">2015-11-17</time>
+    </a>
   </div>
-</section></section>
+
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Here are some instructions to install the latest version of NodeJS on your Raspberry Pi device.</p>
+<p>Find the latest version of node by visiting <a href="http://nodejs.org/dist" target="_blank" rel="external">http://nodejs.org/dist</a>. Make sure you get the -linux-arm-7l version.</p>
+<p>SSH into your Pi, or open up a terminal window and type the following:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget http://nodejs.org/dist/v4.<span class="number">2.1</span>/node-v4.<span class="number">2.1</span>-linux-armv7l.tar.gz</span><br><span class="line">tar xvzf node-v4.<span class="number">2.1</span>-linux-armv7l.tar.gz</span><br><span class="line"></span><br><span class="line">sudo mkdir /opt/node</span><br><span class="line">sudo cp -r node-v4.<span class="number">2.1</span>-linux-armv7l/* /opt/node</span><br><span class="line"></span><br><span class="line">sudo ln <span class="operator">-s</span> /opt/node/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">sudo ln <span class="operator">-s</span> /opt/node/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>In order to be able to run other node binaries that are installed globally, you must also add /opt/node/bin to PATH:</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">export <span class="constant">PATH=</span><span class="variable">$PATH</span><span class="symbol">:/opt/node/bin</span></span><br></pre></td></tr></table></figure>
+<p>Or to add it permanently:</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">echo ‘export <span class="constant">PATH</span>=<span class="variable">$PATH</span><span class="symbol">:/opt/node/bin</span>’ <span class="prompt">&gt;&gt; </span>~<span class="regexp">/.profile</span></span><br></pre></td></tr></table></figure>
+<p>Have fun using NodeJS on your Pi :D</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://letsnode.se/2015/11/17/Installing-NodeJS-on-Raspberry-Pi/" data-id="cih3ve5xz0000ntuyev50tog6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/raspberry-pi/">raspberry pi</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/11/01/Hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello world</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
       
         <aside id="sidebar">
   

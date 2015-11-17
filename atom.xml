@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Node.js developer blog]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://letsnode.se/"/>
-  <updated>2015-11-01T17:09:55.581Z</updated>
+  <updated>2015-11-17T21:15:26.518Z</updated>
   <id>http://letsnode.se/</id>
   
   <author>
@@ -13,6 +13,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Installing NodeJS on Raspberry Pi]]></title>
+    <link href="http://letsnode.se/2015/11/17/Installing-NodeJS-on-Raspberry-Pi/"/>
+    <id>http://letsnode.se/2015/11/17/Installing-NodeJS-on-Raspberry-Pi/</id>
+    <published>2015-11-17T21:06:00.000Z</published>
+    <updated>2015-11-17T21:15:26.518Z</updated>
+    <content type="html"><![CDATA[<p>Here are some instructions to install the latest version of NodeJS on your Raspberry Pi device.</p>
+<p>Find the latest version of node by visiting <a href="http://nodejs.org/dist" target="_blank" rel="external">http://nodejs.org/dist</a>. Make sure you get the -linux-arm-7l version.</p>
+<p>SSH into your Pi, or open up a terminal window and type the following:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget http://nodejs.org/dist/v4.<span class="number">2.1</span>/node-v4.<span class="number">2.1</span>-linux-armv7l.tar.gz</span><br><span class="line">tar xvzf node-v4.<span class="number">2.1</span>-linux-armv7l.tar.gz</span><br><span class="line"></span><br><span class="line">sudo mkdir /opt/node</span><br><span class="line">sudo cp -r node-v4.<span class="number">2.1</span>-linux-armv7l/* /opt/node</span><br><span class="line"></span><br><span class="line">sudo ln <span class="operator">-s</span> /opt/node/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">sudo ln <span class="operator">-s</span> /opt/node/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>In order to be able to run other node binaries that are installed globally, you must also add /opt/node/bin to PATH:</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line">export <span class="constant">PATH=</span><span class="variable">$PATH</span><span class="symbol">:/opt/node/bin</span></span><br></pre></td></tr></table></figure>
+<p>Or to add it permanently:</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">echo ‘export <span class="constant">PATH</span>=<span class="variable">$PATH</span><span class="symbol">:/opt/node/bin</span>’ <span class="prompt">&gt;&gt; </span>~<span class="regexp">/.profile</span></span><br></pre></td></tr></table></figure>
+<p>Have fun using NodeJS on your Pi :D</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Here are some instructions to install the latest version of NodeJS on your Raspberry Pi device.</p>
+<p>Find the latest version of node by]]>
+    </summary>
+    
+      <category term="node.js" scheme="http://letsnode.se/tags/node-js/"/>
+    
+      <category term="raspberry pi" scheme="http://letsnode.se/tags/raspberry-pi/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello world]]></title>
